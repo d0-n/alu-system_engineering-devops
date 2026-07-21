@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# Create a 4096-bit RSA key pair protected by the betty passphrase.
+# Creates an RSA key pair named "school", 4096 bits, protected by passphrase "betty"
 
-script_dir="$(cd "$(dirname "$0")" && pwd)"
-
-cd "$script_dir" || exit 1
-ssh-keygen -t rsa -b 4096 -N betty -f school
+ssh-keygen -t rsa -b 4096 -f school -N "betty" -q
