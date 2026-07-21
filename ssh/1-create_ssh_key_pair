@@ -3,7 +3,5 @@
 
 script_dir="$(cd "$(dirname "$0")" && pwd)"
 
+cd "$script_dir" || exit 1
 ssh-keygen -t rsa -b 4096 -N betty -f school
-
-cp -f school "$script_dir"/ 2>/dev/null || true
-cp -f school.pub "$script_dir"/ 2>/dev/null || true
