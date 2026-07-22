@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Lost in Space</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container { z-index: 1; }
+        h1 {
+            font-size: 8rem;
+            background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: pulse 2s infinite;
+        }
+        p { font-size: 1.5rem; margin: 1rem 0; opacity: 0.8; }
+        .quote { font-style: italic; color: #C6FFDD; font-size: 1.2rem; }
+        a {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(to right, #f7797d, #FBD786);
+            color: #0f0c29;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+        a:hover { transform: scale(1.05); }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>Ceci n'est pas une page</p>
+        <p class="quote">"Not all who wander are lost... but you definitely are."</p>
+        <a href="/">Take me home</a>
+    </div>
+</body>
+</html>
