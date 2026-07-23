@@ -4,7 +4,7 @@ apt-get update -y
 apt-get install nginx -y
 echo "Holberton School" > /var/www/html/index.html
 
-# Write a clean Nginx config with the redirect rule
+# Write Nginx config with redirect rule
 cat > /etc/nginx/sites-enabled/default << 'ENDCONFIG'
 server {
 	listen 80 default_server;
@@ -24,5 +24,8 @@ server {
 	}
 }
 ENDCONFIG
+
+# Remove any Windows line endings from config
+sed -i 's/\r$//' /etc/nginx/sites-enabled/default
 
 service nginx restart
