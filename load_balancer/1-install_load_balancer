@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Installs and configures HAProxy on a load balancer
-apt-get -y update
+apt-get update
 apt-get -y install haproxy
 sed -i 's/^ENABLED=.*/ENABLED=1/' /etc/default/haproxy
 cat > /etc/haproxy/haproxy.cfg <<'EOF'
