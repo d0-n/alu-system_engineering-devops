@@ -3,6 +3,7 @@
 apt-get update
 apt-get -y install haproxy
 sed -i 's/^ENABLED=.*/ENABLED=1/' /etc/default/haproxy
+grep -q 'web-01' /etc/hosts || printf '3.84.150.52 web-01\n44.204.148.199 web-02\n' >> /etc/hosts
 cat > /etc/haproxy/haproxy.cfg <<'EOF'
 global
     log /dev/log local0
