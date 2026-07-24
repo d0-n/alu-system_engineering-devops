@@ -31,7 +31,7 @@ frontend http-in
 
 backend web_servers
     balance roundrobin
-    server web-01 web-01:80 check
-    server web-02 web-02:80 check
+    server web-01 3.84.150.52:80 check
+    server web-02 44.204.148.199:80 check
 EOF
 service haproxy restart
